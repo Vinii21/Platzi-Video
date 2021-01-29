@@ -1,0 +1,138 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+
+.header .header__img {
+  align-self: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.register {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+}
+
+.register__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 500px;
+  width: 400px;
+  padding: 60px 68px 40px;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  color: #fff;
+}
+
+.register__container h2 {
+  width: 250px;
+}
+
+.register__container--form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  padding-top: 30px;
+}
+
+.register__container--form .input {
+  width: 100%;
+  padding-top: 10px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid #fff;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.register__container--form .input:hover {
+  border-bottom: 2px solid #bcbbc2;
+}
+
+.register__container--form .button {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  color: #fff;
+}
+
+.register__container--form .button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.register__container--social-media > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.register__container--social-media > div > img {
+  height: 50px;
+}
+
+.register__container--social-media > div:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 77px;
+  width: 100%;
+}
+
+.footer a {
+  padding: 30px;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .register__container {
+    border: 0;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=register.css.map */

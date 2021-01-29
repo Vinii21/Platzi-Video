@@ -1,0 +1,255 @@
+/* ROOT */
+
+:root {
+    --montain-meadow: #21c08b;
+    --medium-slate-blue:  #8f57fd;
+    --blue-power: #01b7ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Signika', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(45deg, var(--blue-power), var(--montain-meadow), var(--medium-slate-blue));
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+
+    .header__img {
+        align-self: center;
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 200px;
+    }
+
+    .header__nav {
+        margin-right: 30px;
+    }
+
+    .header__nav ul {
+        position: absolute;
+        display: none;
+        text-align: right;
+        margin: 0px 0px 0px -14px;
+        padding: 0px;
+        width: 100px;
+        list-style: none;  
+    }
+
+    .header__nav:hover ul, ul:hover {
+        display: block;
+    }
+
+    .header__nav li {
+        margin: 10px 0px;  
+    }
+    
+    .header__nav li a {
+        font-size: 1.6rem;
+        color: white;
+        text-decoration: none;    
+      }
+    
+      .header__nav li a:hover {
+        text-decoration: underline;        
+      }
+    
+      .header__nav--profile {
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+    
+      .header__nav--profile img {
+          margin-right: 8px;
+          width: 40px;
+      }
+    
+      .header__nav--profile p {
+          margin: 0px;
+          font-size: 1.6rem;
+          color: #fff;
+      }
+}
+
+  .main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+    .main__title {
+        padding-bottom: 25px;
+        font-size: 2.5rem;
+        color: #fff;
+    }
+    
+    .search {
+      padding: 0px 20px;
+      width: 70%;
+      height: 13%;
+      color: #fff;
+      font-size: 1.6rem;
+      border: 3px solid #fff;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      background-color: rgba(255,255,255, 0.1);
+      outline-style: none;
+    }
+    
+    ::placeholder {
+      color: #fff;
+    }
+}
+
+.favorite-list__title {
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    color: #fff;
+}
+
+.corousel {
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    overflow: scroll;
+}
+
+.carousel__container {
+    margin: 70px 0 0 30px;
+    padding-bottom: 10px;
+    white-space: nowrap; /* Esta propiedad permite que los elementos continuen en una sola línea */
+}
+
+.carousel-item {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: burlywood;
+    overflow: hidden;  /* oculta el contenido sobrante */
+    cursor: pointer;
+    transition: 450ms all;
+    -webkit-transition: 450ms all;
+    -moz-transition: 450ms all;
+    -ms-transition: 450ms all;
+    -o-transition: 450ms all;
+    transform-origin: center left;
+}
+
+.carousel-item:hover ~ .carousel-item { /* Virculiña ~ es para dar estilo a los hermanos directos que necesiten las mismas propiedades */
+    transform: translate3d(100px, 0, 0); /* Para que los elementos se muevan conforme crece el de a la par */
+    -webkit-transform: translate3d(100px, 0, 0);
+    -moz-transform: translate3d(100px, 0, 0);
+    -ms-transform: translate3d(100px, 0, 0);
+    -o-transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover; /* Para que la img recupere su tamaño y no se vea tan mal */
+}
+
+.carousel-item__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0;
+    transition: 450ms opacity;
+    -webkit-transition: 450ms opacity;
+    -moz-transition: 450ms opacity;
+    -ms-transition: 450ms opacity;
+    -o-transition: 450ms opacity;
+}
+
+.carousel-item__details div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    height: 80%;
+}
+.carousel-item__details img{
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 40px;
+}
+
+.carousel-item__details .carousel-item__details--title {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.carousel-item__details .carousel-item__details--subtitle {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.carousel-item__details:hover {
+    opacity: 1;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a {
+    padding: 30px;
+    font-size: 1.4rem;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}

@@ -1,0 +1,126 @@
+/* ROOT */
+
+:root {
+    --montain-meadow: #21c08b;
+    --medium-slate-blue:  #8f57fd;
+    --blue-power: #0199ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Signika', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(45deg, var(--blue-power), var(--montain-meadow), var(--medium-slate-blue));
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+.header .header__img {
+    align-self: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.header__nav {
+    margin-right: 30px;
+}
+
+.header__nav ul {
+    position: absolute;
+    display: none;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+    padding: 0px;
+    width: 100px;
+    list-style: none;  
+}
+
+.header__nav:hover ul, ul:hover {
+    display: block;
+}
+
+.header__nav li {
+    margin: 10px 0px;  /* top, bottom ---- right, left */
+}
+
+.header__nav li a {
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: none;    
+  }
+
+  .header__nav li a:hover {
+    text-decoration: underline;        
+  }
+
+  .header__nav--profile {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  .header__nav--profile img {
+      margin-right: 8px;
+      width: 40px;
+  }
+
+  .header__nav--profile p {
+      margin: 0px;
+      font-size: 1.6rem;
+      color: #fff;
+  }
+
+/* NOT FOUND */
+  .not-found {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 430px;
+  }
+
+  .not-found__container {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 2px;
+      color: #fff; 
+  }
+
+  /* FOOTER */
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a {
+    padding: 30px;
+    font-size: 1.4rem;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
